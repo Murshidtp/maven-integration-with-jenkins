@@ -1,14 +1,14 @@
 pipeline {   
     agent any 
     tools{
-        jdk 'jdk11'
-        maven 'maven3'
+        jdk 'jdk17'
+        maven 'maven'
     }
 
     stages {
         stage('Git checkout') {
             steps {
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jaiswaladi246/springboot-java-poject.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Murshidtp/maven-integration-with-jenkins.git'
             }
         }
         
